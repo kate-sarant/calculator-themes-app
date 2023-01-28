@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+:root{
+---mainBackground:hsl(222, 26%, 31%);
+---keypadBackground:hsl(223, 31%, 20%);
+--screenBGND: hsl(224, 36%, 15%);
+---keysBGND:hsl(225, 21%, 49%);
+---buttons:hsl(6, 63%, 50%);
+---letters: hsl(0, 0, 100%);
+---DelandReset:hsl(225, 21%, 49%);
+---inputScreen:white;
+---btns:hsl(30, 25%, 89%);
+}
+[data-theme='two']{
+---mainBackground:hsl(0, 0%, 90%);
+---keypadBackground:hsl(0, 5%, 81%);
+--screenBGND: hsl(0, 0%, 93%);
+---keysBGND:hsl(185, 42%, 37%);
+---buttons: hsl(25, 98%, 40%);
+---letters: hsl(223deg 31% 20%);
+---DelandReset: hsl(185, 42%, 37%);
+---inputScreen: hsl(185, 58%, 25%);
+---btns: hsl(0deg 0% 93%);
+;
+}
+[data-theme='three']{
+---mainBackground:hsl(268, 75%, 9%);
+---keypadBackground: hsl(268, 71%, 12%);
+--screenBGND:  hsl(268, 71%, 12%);
+---keysBGND:hsl(176, 100%, 44%);
+---buttons: hsl(177, 92%, 70%);
+---letters: hsl(52, 100%, 62%);
+---DelandReset: hsl(285, 91%, 52%);
+---inputScreen: hsl(52, 100%, 62%);
+---btns:hsl(281, 89%, 26%);
+}
+
+
+*{
+font-family: 'League Spartan', sans-serif;
+}
+body{
+background-color: var(---mainBackground);
+}
+
+header{
+display: flex;
+justify-content: space-between;
+color:var(---inputScreen);
+}
+footer{
+position: absolute;
+bottom: 0;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.theme{
+display: inline-flex;
+float:right;
+background-color: var(---keypadBackground);
+height: 18px;
+width: 67px;
+border-radius: 44px;
+position: relative;
+top: 18px;
+}
+label{
+position: relative;
+top: -17px;
+left: 9px;
+caret-color: black;
+letter-spacing: -10px;
+
+}
+.theme input{
+opacity: 0;
+
+}
+input:checked{
+accent-color:var(---buttons);
+border-style:none;
+opacity: 1;
+
+}
+.calc{
+
+margin: 0 auto;
+padding-top: 10%;
+width: 319px;
+
+}
+#screen{
+text-align: end;
+width: 96%;
+position: relative;
+height: 7vh;
+font-size: 43px;
+color: var(---inputScreen);
+background-color: var(--screenBGND);
+padding: 5px;
+margin-bottom:16px;
+border-radius: 7px;
+border-style: none;
+
+
+}
+#screen:placeholder{
+color:white;
+}
+
+/* all the buttons(numbers end sighs without the 2 bigones) */
+button{
+cursor: pointer;
+}
+.buttons{
+padding: 11px;
+background-color: var(  ---keypadBackground);
+border-radius: 4px;
+padding-bottom: 18px;
+color:var(--screenBGND);
+
+
+}
+.btn{
+width: 4em;
+height: 2em;
+border-radius: 5px;
+border-style: none;
+margin: 5px;
+cursor: pointer;
+font-size: 15px;
+font-weight: bold;
+}
+.btns{
+color:var(---letters);
+background-color:var(---btns);
+}
+#delBtn,#reset{
+color:white;
+background-color: var(---DelandReset);
+text-transform: uppercase;
+}
+#reset{
+font-size: 15px;
+font-weight: bold;
+}
+#equal{
+background-color: var(---buttons);
+color:white;
+
+}
+
+/* two big buttons at the end */
+.end{
+display: flex;
+justify-content: space-around;
+margin-top: 5px;
+}
+
+.bigBtn{
+width: 45%;
+height: 2em;
+border-radius: 5px;
+border-style: none;
+cursor: pointer;
+}
+#theme{
+content: 'theme';
+position: relative;
+left: 74px;
+color: var(---letters);
+letter-spacing: 2px;
+text-transform: uppercase;
+font-size: 13px;
+top: 5px;
+
+}
