@@ -23,9 +23,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./photos/theme1.png)
-![](./photos/theme2.png)
-![](./photos/theme3.png)
+![](./theme1.png)
+![](./theme2.png)
+![](./theme3.png)
 
 ### Links
 
